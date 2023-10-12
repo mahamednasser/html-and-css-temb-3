@@ -1,0 +1,495 @@
+/* start rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #212529;
+
+}
+ul{
+    list-style: none;
+}
+.container{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+@media (max-width:768px){
+    .container{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+/* small */
+@media (min-width:768px){
+    .container{
+        width:  750px;
+    }
+}
+/* medium */
+@media(min-width:992){
+    .container{
+        width: 970px;
+    }
+}
+/* large */
+@media (min-width:1200px){
+.container{
+    width: 1170px;
+}
+}
+/* end global rules  */
+
+/* start header  */
+header{
+    padding: 15px 150px 15px 150px;
+    position: absolute;
+    width: 100%;
+    z-index: 992;
+    position: fixed;
+    background-color:#212529;
+        color: white;
+    }
+
+@media(max-width:767px){
+    header{
+        padding: 30px;
+    }
+    
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    
+}
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    font-family:sans-serif;
+    
+}
+header nav ul li i{
+    color: white;
+}
+
+header nav ul li img{
+    width: 50px;
+    height: 50px;
+}
+/* end header  */
+
+/* start landing */
+.landing{
+    background-image: url(../image/header.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.landing .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(140% 110% at 48% 42%, rgba(33, 37, 41, 0.5), rgba(33, 37, 41, 0.6), rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.8), rgba(33, 37, 41, 0.93), #212529 55%, #212529 200%);
+}
+.landing .overlay .text{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+}
+.landing .overlay .text span{
+    font-size: 50px;
+    font-weight: 800;
+    font-family:cursive;
+}
+.landing .overlay .text p{
+    margin-top: 20px;
+    font-weight:normal;
+}
+.landing .overlay button {
+    padding: 10px 15px;    
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: transparent;
+    border: 3px solid white;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: cursive;
+}
+@media(max-width:767px){
+    .landing .overlay button {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+
+    }
+
+}
+.landing .overlay button i{
+    width: 7px;
+    height: 7px;
+    color: red;
+    margin-right: 5px;
+}
+/* end landing */
+
+/* start exploer */
+.explor{
+    width: 100%;
+    margin-bottom: 100px;
+}
+.explor .container {
+    padding: 0px 100px;
+    width: 100%;
+    text-align: center;
+
+}
+.explor .container .text .span{
+    color: white;
+    margin: 20px;
+    font-size: 35px;
+    font-family: sans-serif;
+    font-weight: 700;
+    
+}
+
+.explor .container .text p{
+    font-size:medium;
+    color:#6c757d;
+    font-family: sans-serif;
+    margin-bottom: 50px;
+}
+.explor .container .boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width: 880px){
+    .explor .container .boxes{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+.explor .container .boxes .box{
+    width: calc(95% / 3);
+    position: relative;
+    margin-bottom: 50px;
+    
+    
+}
+@media(max-width: 880px){
+    .explor .container .boxes .box{
+        width: 100%;
+    }
+    
+}
+.explor .container .boxes .box .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(52, 58, 64, 0.5);
+    width: 100%;
+    height: 100%;
+}
+.explor .container .boxes .box img{
+    width:100%;
+    height: 100%;
+    border-radius: 5px;
+    
+}
+
+
+
+
+.explor .container .boxes .box:hover .par{
+    opacity: 100%;
+    position: absolute;
+    top: 60%;
+}
+@media(max-width:880px){
+    .explor .container .boxes .box:hover .par{
+        position: absolute;
+        top: 500px;
+    }
+}
+
+.explor .container .boxes .box:hover .label{
+    position: absolute;
+    top: 50%;
+}
+
+.explor .container .boxes .box:hover .overlay{
+    background: rgba(52, 58, 64, 0.8);
+
+}
+
+
+.explor .container .boxes .box .label{
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.5s;
+    font-family: cursive;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media(max-width:880px){
+    .explor .container .boxes .box:hover .label{
+        top: 40%;
+    }
+}
+
+
+.explor .container .boxes .box .par{
+    opacity: 0%;
+    position:absolute;
+    top: 250px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.7s;
+}
+@media(max-width:880px){
+    .explor .container .boxes .box:hover .par{
+        top: 50%;
+    }
+
+}
+
+.explor .container .load{
+    width: fit-content;
+    margin: auto;
+    color: rgba(255, 255, 255, 0.269);
+    font-family: sans-serif;
+    font-weight:normal;
+    cursor: pointer;
+}
+.explor .container .load:hover{
+    color: rgba(255, 255, 255, 0.55);
+}
+    /* end exploer */
+
+    /* start journal */
+    .journal{
+        width: 100%;
+        padding: 0px 100px
+        ;
+    }
+    .journal .container{
+        width: 100%;
+    }
+    .journal .container .text{
+        text-align: center;
+    }
+    .journal .container .text span{
+        color: white;
+        margin: 20px;
+        font-size: 35px;
+        font-family: sans-serif;
+        font-weight: 700;
+        
+    }
+    .journal .container .text p{
+        font-size:medium;
+        color:#6c757d;
+        font-family: sans-serif;
+        margin: 30px 0px;
+    }
+    
+    .journal .container .boxx{
+        display: flex;
+        justify-content: space-between;
+    }
+    @media(max-width:880px){
+        .journal .container .boxx{
+            flex-direction: column;
+        }
+
+    }
+    .journal .container .boxx .box1{
+        flex-basis: 48%;
+        text-align: center;
+    }
+    @media(max-width:880px){
+        .journal .container .boxx .box1{
+            flex-basis: 100%;
+        }
+        
+    }
+    .journal .container .boxx .box1 img{
+        width: 100%;
+        height: 330px;
+        border-radius: 10px;
+        
+    }
+    .journal .container .boxx .box1 span{
+        color: white;
+        font-family: sans-serif;
+        font-size:small;
+        font-weight: 500;
+        
+    }
+    .journal .container .boxx .box1 p{
+        font-size:medium;
+        color:rgba(255, 255, 255, 0.687);
+        font-family: sans-serif;
+        margin: 30px 0px;
+    }
+    .journal .container .boxx .box1 h3{
+        font-family: sans-serif;
+        font-size: 25px;
+        font-weight: 600;
+        color: white;
+        margin-top: 15px;
+    }
+    .journal .container .spannn{
+        width: fit-content;
+        margin: auto;
+        color: rgba(255, 255, 255, 0.269);
+        font-family: sans-serif;
+        font-weight:normal;
+        cursor: pointer;
+        margin-bottom: 50px;
+    }
+    .journal .container .spannn:hover{
+        color: rgba(255, 255, 255, 0.55);
+    }
+    /* end journal */
+
+    /* start contact */
+    .contact{
+        padding-top: 120px ;
+        padding-bottom: 20px;
+        z-index: 990;
+        position: relative;
+        background-image: url(../image/footer.jpg);
+        background-size: cover;
+        background-position: bottom;
+        color: #fff;
+       
+    }
+    .contact .overlay{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-image: -webkit-radial-gradient(48% 65%, 200% 130%, rgba(33, 37, 41, 0.5), rgba(33, 37, 41, 0.6), rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.87), rgba(33, 37, 41, 0.99), #212529 55%, #212529 200%);
+        background-image: radial-gradient(200% 130% at 48% 65%, rgba(33, 37, 41, 0.5), rgba(33, 37, 41, 0.6), rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.87), rgba(33, 37, 41, 0.99), #212529 55%, #212529 200%);
+    }
+    .contact .container{
+        width: 100%;
+        position: relative;
+        text-align: center;
+
+        
+    }
+    .contact .container .text{
+        text-align: center;
+    }
+    .contact .container .text span{
+        color: white;
+        margin: 20px;
+        font-size: 35px;
+        font-family: sans-serif;
+        font-weight: 700;
+    }
+    .contact .container .text p{
+        color: white;
+        margin-top: 10px;
+        font-family: sans-serif;
+        margin-bottom: 25px;
+    }
+    .contact .container form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    @media(max-width:767px){
+        .contact .container .text span{
+            font-size: 19px;
+            font-weight: 700;
+        }
+        
+    }
+    @media(max-width:767px){
+        .contact .container .text p{
+            font-size: 12px;
+        }
+
+    }
+    
+    .contact .container form input{
+        outline: none;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        width:60%;
+        padding: 15px; 
+        font-family: sans-serif;
+        color: #fff;
+    }
+    .contact .container form input::placeholder{
+        color: white;
+    }
+
+    .contact .container form textarea{
+        outline: none;
+        height: 200px;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        padding: 15px;
+        font-family: sans-serif;
+        width: 60%;
+        
+    }
+    .contact .container form textarea::placeholder{
+        color: #fff;
+    }
+    .contact .container form #submit{
+        cursor: pointer;
+    }
+
+    
+    
+    /* end contact */
+
+   
+   
+   
